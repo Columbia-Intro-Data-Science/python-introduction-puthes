@@ -1,0 +1,24 @@
+<html>
+  <style>
+    body{ 
+      font-size: 12pt;
+      font-family: arial;
+    }
+  </style>
+
+<body>
+<h1>PCA:</h1>
+<h4>20,000 Dimensional PCA has been reduced to 2 dimensions. Below is a scatter plot of the reduced dimenson data set for 46 samples.  Notice the clustering of the five different groups.  The first group is 1 empty image, the second are circles, the third are triangles, the fourth are hearts, and the fifth are stars:</h4>
+<img src="{{url_for('static',filename="pca_result.jpg")}}">
+
+<h1>Variance:</h1>
+<img src="{{url_for('static',filename="variance.jpg")}}">
+
+<h1>Correlation Matrix of first 15 components:</h1>
+<img src="{{url_for('static',filename="correlation_PCA.jpg")}}">
+
+
+</body>
+
+
+</html>

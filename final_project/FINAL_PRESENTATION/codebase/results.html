@@ -1,0 +1,76 @@
+<html>
+  <style>
+    body{ 
+      font-size: 12pt;
+      font-family: arial;
+    }
+  </style>
+
+<h4><div>{{name}} ! </div>You submitted drawings of the following shapes in this order:</h4>
+
+<h4>1.Circle</h4>
+<h4>2.Triangle</h4>
+<h4>3. Heart</h4>
+<h4>4. Star</h4>
+
+<h1>KNN:</h1>
+
+<h4>Using k nearest neighbor I have identified your first,second,third, and fourth drawings as:</h4>
+<form method="POST" action="/results">
+<div>{{data}}</div>
+<div>{{data1}}</div>
+<div>{{data2}}</div>
+<div>{{data3}}</div>
+<img src="{{url_for('static',filename="knn.png")}}">
+
+<h3>You scored <div>{{dexterity}}</div> % for dexterity using KNN!</h3>
+
+<h1>Linear support vector machine :</h1>
+<h4>Using Linear support vector machine I have identified your first, second, third, and fourth drawings as:</h4>
+
+<form method="POST" action="/results">
+<div>{{data4}}</div>
+<div>{{data5}}</div>
+<div>{{data6}}</div>
+<div>{{data7}}</div>
+
+<h3>You scored <div>{{dexterity1}}</div> % for dexterity using support vector machine!</h3>
+
+<img src="{{url_for('static',filename="svm.png")}}">
+
+<h1>Logistic Regression:</h1>
+
+<h4>Using Logistic Regression I have identified your first,second,third, and fourth drawings as:</h4>
+
+<form method="POST" action="/results">
+<div>{{data8}}</div>
+<div>{{data9}}</div>
+<div>{{data10}}</div>
+<div>{{data11}}</div>
+
+<h3>You scored <div>{{dexterity2}}</div> % for dexterity using Logistic Regression!</h3>
+
+<img src="{{url_for('static',filename="logreg.png")}}">
+
+
+<h1>SVM after PCA:</h1>
+
+<h4>Using Support Vector Machine after PCA I have identified your first,second,third, and fourth drawings as:</h4>
+
+<form method="POST" action="/results">
+<div>{{data12}}</div>
+<div>{{data13}}</div>
+<div>{{data14}}</div>
+<div>{{data15}}</div>
+
+<h3>You scored <div>{{dexterity3}}</div> % for dexterity using Support Vector Machine after PCA!</h3>
+
+<img src="{{url_for('static',filename="pca_svm.png")}}">
+
+
+
+
+</body>
+
+
+</html>

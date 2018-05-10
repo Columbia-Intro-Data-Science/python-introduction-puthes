@@ -1,0 +1,62 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+
+<!doctype html>
+    <title>Dexterity Check</title>
+<img src="{{url_for('static',filename="logo.jpg")}}">
+    <h1>Dexterity Check</h1>
+
+<p><a href="background">Background</a></p>
+<p></p>
+<p><a href="examples">Examples</a></p>
+<p></p>
+<p><a href="pca">PCA</a></p>
+<p><a href="All_submissions">All submissions</a></p>
+<p></p>
+
+<h5>Directions: Enter your personal information.  Then use a paint software or drawing app to create your drawings and save them in .jpg format. See the 'examples' page for how the shapes should look.  Label them as circle.jpg, triangle.jpg, heart.jpg, star.jpg. At least 200x200 in size. Submit ALL four shapes in the indicated order.   Then click upload once. Please wait 2 minutes . . .</h5>
+
+
+<form method=post enctype=multipart/form-data>
+<p>Names: <input type="text" name="name_a1">Location: <input type="text" name="name_b1"> Movement Disorder (y/n): <input type="text" name="name_c1"> Special Details: <input type="text" name="name_d1">  
+    <h4>Circle</h4>
+    <p><input type=file name=file> 
+    <h4>Triangle</h4>
+    <p><input type=file name=file1>
+    <h4> Heart</h4>
+    <p><input type=file name=file2>
+    <h4> Star</h4>
+    <p><input type=file name=file3>
+
+         <input type=submit value=Upload>
+    </form>
+<div>
+
+<h4>Uploaded files</h4>
+<div>{{data}}</div>
+<div>{{data1}}</div>
+<div>{{data2}}</div>
+<div>{{data3}}</div>
+
+  </div>
+<div>
+    
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+</body>
+
+
+</html>
